@@ -1,42 +1,48 @@
 
 import { useState } from "react"
-import { Course } from "./components/Course"
-import Student from "./components/Student"
-import Counter from "./components/Counter"
+import Employee from "./components/Employee";
+import Fruits from "./components/Fruits";
 function App() {
- const [name, setName]= useState("Thomas")
- const [counter, setCounter]= useState(3)
-  const changeName = function(){
-    setName("Kaleb")
-  }
-  const changeName2 = ()=>{
-    setName("Sara")
+  //const[name, setName] = useState("Saron")
+  return (
+    <>
+      <Student />
+      <h2>Employee infomration</h2>
+      <Employee />
+      <Fruits />
+    </>
+  )
+}
+export default App
+
+
+function Student() {
+  const [student, setStudent] = useState({ id: 1, name: "Ali", dept: "SD" })
+
+  const { id, name, dept } = student;
+  const course = "Web programming"
+  console.log(student)
+  const addcourse = function () {
+    setStudent({
+      ...student, course: course
+    })
   }
   return (
     <>
-    <h1>My react project</h1>
-     {/* <Student />
-     <Student name="Aron"/>
-     <Student name="Alex" dept="SD"/>
-     <Student name="Selam" address="ca" >
-        <p>This student is star</p>
-        <Course />
-     </Student> */}
-     <h1>REACT state</h1>
-     <p>
-      {name}
-     </p>
-     <button onClick={changeName}>Change name</button>
-     <button onClick={changeName2}>Change name2</button>
-     <button onClick={()=>{setName("TG")}}>Change name2</button>
-     <h2>Counter app</h2>
-     <p>{counter}</p>
-     <button onClick={()=>{setCounter(counter+2)}}>Counte by 1</button>
-    
-     <Counter />
+      <h1>State variable with object and array</h1>
+      <p>Name{name}</p>
+
+      <p>id : {student.id}</p>
+      <p>name :{student.name}</p>
+      <p>dept : {student.dept}</p>
+      <p>course: {student.course}</p>
+
+      <p>id : {id} </p>
+      <p>name : {name}</p>
+      <button type="button" onClick={() => setStudent({ ...student, course: course })}>Add course</button>
     </>
   )
 }
 
-export default App
+
 
