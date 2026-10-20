@@ -1,0 +1,18 @@
+.container{
+    box-sizing: border-box;
+    background-color: lightblue;
+    border: solid 2px red;
+    border-radius: 15px;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+.title{
+    background-color: orange;
+}
+#content{
+    color: blue;
+}
+p{
+    background-color: black;
+}
