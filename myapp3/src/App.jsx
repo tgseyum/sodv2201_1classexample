@@ -1,14 +1,10 @@
 import {BrowserRouter, Routes,  Link , Outlet, Route} from "react-router-dom"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Course from "./pages/Course"
-import Navigation from "./pages/Navigation"
-import Topics from "./pages/Topics"
-import CourseDetail from "./pages/CourseDetail"
+
+import ContextExample from "./context/ContextExample"
  function App() {
    return (
     <>
-    <h3>Routing exmaple</h3>
+    {/* <h3>Routing exmaple</h3>
     <BrowserRouter>
       <Navigation />
       <Routes>
@@ -22,7 +18,8 @@ import CourseDetail from "./pages/CourseDetail"
     
     
     </BrowserRouter>
-     
+      */}
+      <ContextExample />
      </>
   )
 }
